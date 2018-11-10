@@ -17,18 +17,15 @@ void setup() {
 }
 
 void loop() {
+  if (Serial.available() > 0) {
+    voltage = Serial.parseInt();
+    Serial.read();  // consume newline character
 
-  unsigned long newserial = Serial.available();
-
-   if (newserial != oldserial){
-        oldserial = newserial;
-        voltage = Serial.parseInt();
-       Serial.println("Enter new voltage");
-  
+    Serial.print("Got: ");
+    Serial.println(votage);
   }
   
   unsigned long newmillis = millis();
-
   if (newmillis - oldmillis >= interval){
       oldmillis = newmillis;
      Serial.println(voltage);
