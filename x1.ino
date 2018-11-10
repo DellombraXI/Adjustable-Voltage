@@ -22,7 +22,7 @@ void loop() {
     Serial.read();  // consume newline character
 
     Serial.print("Got: ");
-    Serial.println(votage);
+    Serial.println(voltage);
   }
   
   unsigned long newmillis = millis();
