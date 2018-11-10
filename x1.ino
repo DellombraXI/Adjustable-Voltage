@@ -20,9 +20,6 @@ void loop() {
   if (Serial.available() > 0) {
     voltage = Serial.parseInt();
     Serial.read();  // consume newline character
-
-    Serial.print("Got: ");
-    Serial.println(voltage);
   }
   
   unsigned long newmillis = millis();
