@@ -23,6 +23,7 @@ void loop() {
   }
   
   unsigned long newmillis = millis();
+  
   if (newmillis - oldmillis >= interval){
       oldmillis = newmillis;
      Serial.println(voltage);
